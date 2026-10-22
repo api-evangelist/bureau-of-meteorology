@@ -1,0 +1,42 @@
+generated: '2026-10-22'
+method: searched
+probe: true
+source: https://www.bom.gov.au/privacy
+signals:
+  incident_notification:
+    url: https://www.bom.gov.au/privacy
+    section: 'Privacy policy - Purpose'
+    evidence:
+    - source: https://www.bom.gov.au/privacy
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: >-
+        The bureau has specific responsibilities under the Privacy Act 1988 (Cth) including adhering to the
+        Data Breach Notification Scheme and the Australian Government Agencies Privacy Code, which include
+        requirements for a clear and up-to-date privacy policy.
+    note: >-
+      The Bureau says it is bound by Australia's statutory Notifiable Data Breaches scheme under the Privacy
+      Act 1988. That is a regulatory obligation it acknowledges. The page does not publish its own notification
+      timeline, channel or customer-facing breach commitment.
+  accessibility_conformance:
+    url: https://www.bom.gov.au/accessibility
+    section: 'Accessibility'
+    standard: WCAG 2.1 AA
+    evidence:
+    - source: https://www.bom.gov.au/accessibility
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: >-
+        We aim to meet the Australian Government standard for web accessibility. This includes the World Wide
+        Web Consortium’s Web Content Accessibility Guidelines version 2.1 (WCAG 2.1) at level AA. This
+        statement was updated on 4 February 2026.
+    note: >-
+      This is a statement that the Bureau aims to meet WCAG 2.1 AA on its website. It is not a claim that the
+      site conforms, and it does not cite an audit or a VPAT/ACR. It covers the website, not the data services
+      or APIs.
+notes: >-
+  Legal pages read: /privacy (200) and /accessibility (200), both fetched with a browser user-agent on 2026-10-22.
+  In the server-rendered HTML, the privacy policy body stops after the Purpose, Scope and Policy headings. Its
+  sections on access, correction, retention and overseas disclosure did not render, so no data_subject_request,
+  data_retention or data_residency signal is recorded. The data licence agreement PDF
+  (bureau-of-meteorology-data-licence-agreement-october-2026.pdf) had no candidate lines in the dossier.

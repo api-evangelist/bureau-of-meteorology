@@ -1,0 +1,54 @@
+name: Bureau of Meteorology MCP Server (candidate)
+type: MCPServer
+generated: '2026-10-22'
+method: derived
+source: openapi/bureau-of-meteorology-water-data-online-sos2-capabilities.xml
+status: candidate
+description: >-
+  No official Bureau of Meteorology MCP server was found. A web search (2026-10-22) surfaced only
+  community-built servers that wrap BOM data (e.g. glama.ai/mcp/servers/craigles75/au-weather-mcp,
+  listed as unclaimed by its author), none published or endorsed by the Bureau. Pre-flight probes of
+  https://www.bom.gov.au/mcp (403) and https://reg.bom.gov.au/api/mcp (401) returned the same status as
+  their control paths, so they are opaque edge responses and prove nothing. The candidate tools below are derived
+  from the five operations advertised in the Water Data Online SOS 2.0 GetCapabilities document (KISTERS KiWIS SOS2)
+  saved in this repo. There is no OpenAPI for any BOM API, so these tools are not bound to operationIds.
+deployment:
+  mode: none
+  auth: unknown
+  verified: derived
+search_evidence:
+- query: Bureau of Meteorology MCP server official
+  date: '2026-10-22'
+  result: community servers only; none official
+  urls:
+  - https://glama.ai/mcp/servers/craigles75/au-weather-mcp
+probes:
+- url: https://www.bom.gov.au/mcp
+  status: 403
+  control_status: 403
+  verdict: opaque
+- url: https://reg.bom.gov.au/api/mcp
+  status: 401
+  control_status: 401
+  verdict: opaque
+backing_api:
+  name: Water Data Online SOS2
+  base_url: https://www.bom.gov.au/waterdata/services
+  protocol: OGC SOS 2.0 (KVP GET / POST)
+  note: The capabilities document advertises an internal host (http://wdo-prod-01/waterdata/services?datasource=0) for its operation endpoints; the public endpoint is https://www.bom.gov.au/waterdata/services.
+tools:
+- name: sos_get_capabilities
+  sos_operation: GetCapabilities
+  description: Return the service metadata, offerings, procedures, observed properties and features of interest of the Water Data Online SOS2 service.
+- name: sos_describe_sensor
+  sos_operation: DescribeSensor
+  description: Describe a procedure (sensor / timeseries) advertised by the service.
+- name: sos_get_data_availability
+  sos_operation: GetDataAvailability
+  description: List the time ranges for which observations exist for given procedures, observed properties and features of interest.
+- name: sos_get_feature_of_interest
+  sos_operation: GetFeatureOfInterest
+  description: Return monitoring stations (features of interest), optionally filtered by observed property or spatial filter.
+- name: sos_get_observation
+  sos_operation: GetObservation
+  description: Return water observation timeseries values for a station, observed property and time period.

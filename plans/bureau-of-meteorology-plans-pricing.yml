@@ -1,0 +1,84 @@
+name: Bureau of Meteorology pricing
+generated: '2026-10-22'
+method: searched
+source: https://reg.bom.gov.au/climate/data-services/charges.shtml
+audience: business-product
+pricing_basis: usage-other
+published: true
+currency_note: All charges listed below are for the 2026/2027 financial year and are GST inclusive.
+delivery:
+  delivery: managed
+note: These are per-request and annual-subscription charges for climate data services (data requests, subscriptions, gridded/spatial products), not per-call API pricing. Real-time forecast, warning and observation products via the web and Anonymous FTP are free and not for commercial use (https://reg.bom.gov.au/catalogue/data-feeds.shtml). The Space Weather API docs state no price.
+plan_count: 12
+plans:
+- name: Standard (Category 1) data requests
+  description: You supply all the relevant details, including the station numbers, data frequency and dates and data can be sent as an email attachment.
+  price_text: "$206"
+  price: 206
+  billing_period: per request
+  features: ["Additional batch: $103"]
+  limits: []
+- name: Assisted (Category 2) data requests
+  description: We identify the relevant weather station site numbers for you or provide other assistance or advice.
+  price_text: "$257"
+  price: 257
+  billing_period: per request
+  features: ["Additional batch: + 103"]
+  limits: []
+- name: Complex data requests
+  price_text: Quoted
+  price: Quoted
+  features: []
+  limits: []
+- name: Certified Copy
+  description: Meteorological observational data for a set period, up to 25 pages.
+  price_text: "$438"
+  price: 438
+  features: ["Additional pages, each block of 10 pages: $56"]
+  limits: ["up to a maximum of 105 pages in total"]
+- name: Archived forecasts and warnings
+  price_text: "$257"
+  price: 257
+  features: ["Additional years: $56"]
+  limits: []
+- name: Priority fee
+  price_text: "$255"
+  price: 255
+  features: ["For requests less than $400"]
+  limits: []
+- name: Climate data standard subscription
+  price_text: "$696 pa"
+  price: 696
+  billing_period: annual (financial year July-June, payment in advance)
+  features: ["Additional standard subscription: $590 pa"]
+  limits: []
+- name: Climate data assisted subscription
+  price_text: "$869 pa"
+  price: 869
+  billing_period: annual
+  features: ["Additional assisted subscription: $696 pa"]
+  limits: []
+- name: Subscriptions renewal
+  price_text: "$590 pa"
+  price: 590
+  billing_period: annual
+  features: ["Additional subscriptions renewal: $447 pa"]
+  limits: []
+- name: Thunderstorm confirmation subscription service - standard user
+  price_text: "$1,614 pa"
+  price: 1614
+  billing_period: annual
+  features: []
+  limits: []
+- name: Thunderstorm confirmation subscription service - heavy user
+  description: Commercial users who require a single login to be shared across multiple brands or subsidiaries.
+  price_text: "$5,112 pa"
+  price: 5112
+  billing_period: annual
+  features: []
+  limits: []
+- name: Himawari-8/9 solar data
+  price_text: "$6,208"
+  price: 6208
+  features: []
+  limits: []

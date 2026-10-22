@@ -1,0 +1,32 @@
+generated: '2026-10-22'
+method: searched
+source: https://sws-data.sws.bom.gov.au/api-docs#error-codes
+api: Space Weather API
+format: custom-json
+envelope:
+  field: errors
+  shape: 'array of ResponseError {code: Number, message: String}, returned alongside a failure HTTP status'
+  note: Although error codes will remain constant, the corresponding messages might change.
+  example: {code: 43, message: 'Unsupported option value: location=fantasy-land'}
+problems:
+- {status: 405, code: '01', title: 'Unsupported HTTP request method: {method-name}'}
+- {status: 400, code: '11', title: 'Unrecognised API request: {request}'}
+- {status: 400, code: '12', title: 'Unsupported API version: {version}'}
+- {status: 400, code: '13', title: 'Unsupported API request method: {method-name}'}
+- {status: 400, code: '14', title: Request body cannot be parsed}
+- {status: 400, code: '21', title: Missing API key}
+- {status: 400, code: '22', title: 'Unsupported API key: {api_key}'}
+- {status: 403, code: '23', title: Requested data not permitted to the API key provided}
+- {status: 400, code: '31', title: 'Missing field: {field-name}'}
+- {status: 400, code: '32', title: 'Unsupported field: {field-name}'}
+- {status: 400, code: '41', title: 'Missing option: {option-name}'}
+- {status: 400, code: '42', title: 'Unsupported option name: {option-name}'}
+- {status: 400, code: '43', title: 'Unsupported option value: {option-name} = {option-value}'}
+http_statuses:
+- {status: 200, title: OK, description: Success.}
+- {status: 400, title: Bad request, description: 'The request body is missing, cannot be parsed, or has missing or invalid content.'}
+- {status: 403, title: Forbidden, description: The API key specified does not have permission to access the requested data.}
+- {status: 405, title: Method not allowed, description: 'An unsupported request method (GET, PUT, etc) was used (when POST, for example, was expected).'}
+- {status: 500, title: Internal server error, description: An unexpected error has occurred on the server.}
+- {status: 503, title: Service unavailable, description: 'Some part of the server infrastructure is overloaded, or unavailable.'}
+note: The docs publish the code table and the HTTP status table separately and do not map each code to a status; the status on each code row is our inference from the status descriptions (405 for wrong method, 403 for permission, 400 for body/field/option problems) and should be read as such.

@@ -1,0 +1,12 @@
+generated: '2026-10-22'
+method: searched
+source: openapi/bureau-of-meteorology-water-data-online-sos2-capabilities.xml
+standards:
+- id: ogc-sos-2.0
+  conforms: true
+  evidence: 'GetCapabilities (ows:ServiceTypeVersion 2.0.0) declares profiles http://www.opengis.net/spec/SOS/2.0/conf/core, /conf/kvp-core, /conf/soap, /conf/xml, /conf/foiRetrieval and /conf/gda (openapi/bureau-of-meteorology-water-data-online-sos2-capabilities.xml, ows:Profile)'
+  domain_standard: true
+- id: ogc-hydrology-sos-profile-1.0
+  conforms: true
+  evidence: 'Same GetCapabilities declares profile http://www.opengis.net/spec/SOS_application-profile_hydrology/1.0/req/hydrosos'
+  domain_standard: true

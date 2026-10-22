@@ -1,0 +1,22 @@
+generated: '2026-10-22'
+method: searched
+source: https://sws-data.sws.bom.gov.au/api-docs
+api: Space Weather API
+auth: {style: api key in JSON request body (field api_key), see: authentication/bureau-of-meteorology-authentication.yml}
+request_style: 'RPC over HTTP: every method is a POST to https://sws-data.sws.bom.gov.au/api/v1/<method-name> with a JSON body {api_key, options}; UTF-8; JSON responses.'
+datetime: 'All dates and times are in UTC; date yyyy-mm-dd, time yyyy-mm-dd hh:mm:ss, 24-hour clock.'
+versioning: {style: url-path, current: v1, see: lifecycle/bureau-of-meteorology-lifecycle.yml}
+pagination:
+  style: none
+  filters: [options.start, options.end]
+  note: Large historical data responses are limited to 10,000 elements; responses are truncated, with following items just omitted. An empty data array indicates that the requested data is not available.
+errors: {envelope: 'errors[] of {code, message}', see: errors/bureau-of-meteorology-error-codes.yml}
+idempotency:
+  coverage: na
+  note: The API is read-only; POST is used only to carry the key and query options, no resource is created or changed.
+reversibility:
+  status: na
+  note: Read-only data retrieval API (Space Weather API) and read-only OGC SOS GetCapabilities/GetObservation service; no write surface to reverse.
+dry_run_mode: na
+rate_limit_signaling: {documented: false, see: rate-limits/bureau-of-meteorology-rate-limits.yml}
+request_id: {documented: false}

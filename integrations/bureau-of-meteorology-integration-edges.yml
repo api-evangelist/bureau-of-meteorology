@@ -1,0 +1,22 @@
+generated: '2026-10-22'
+method: none
+source:
+- https://zapier.com/apps/bureau-of-meteorology/integrations
+- https://n8n.io/integrations/bureau-of-meteorology/
+- https://composio.dev/toolkits/bureau-of-meteorology
+- https://monid.ai/tools/bureau-of-meteorology
+checked:
+- https://zapier.com/apps/bureau-of-meteorology/integrations
+- https://www.make.com/en/integrations/bureau-of-meteorology
+- https://n8n.io/integrations/bureau-of-meteorology/
+- https://sws-data.sws.bom.gov.au/api-docs
+- https://reg.bom.gov.au/catalogue/data-feeds.shtml
+- https://composio.dev/toolkits/bureau-of-meteorology
+- https://monid.ai/tools/bureau-of-meteorology
+summary: null
+marketplace_apps: []
+edges: []
+templates: []
+note: Zapier 404, n8n 404, Make 403 (inconclusive). The Space Weather API page lists client organisations (Airservices
+  Australia, AMSA, QANTAS, AEMO ...) as space-weather service clients, not as API integrations, so none is recorded
+  as an edge. No contract operation names another service.

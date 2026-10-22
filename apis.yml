@@ -1,23 +1,159 @@
 aid: bureau-of-meteorology
+
 name: Bureau of Meteorology
-description: 'Bureau of Meteorology is a company surfaced via the API Evangelist harvest backlog (source:
-  australia-apidays-2026) and added to the network as a stub for full-pipeline profiling.'
+
+description: The Bureau of Meteorology (BOM) is Australia's national weather, climate and water agency. It provides forecasts, severe weather
+  warnings, observations, flood information, marine and high seas forecasts and climate information, and offers data products for weather, climate,
+  atmosphere, oceans, water and space weather through free services and paid subscription services, including registered-user real-time data feeds
+  (forecast grids, satellite, radar and a geospatial service), climate data services and water data.
+
 url: https://raw.githubusercontent.com/api-evangelist/bureau-of-meteorology/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:australia-apidays-2026
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-22 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-22'
+
 modified: '2026-10-22'
+
 tags:
 - Company
-apis: []
+- Government
+- Weather
+- Climate
+- Meteorology
+- Water
+- Open Data
+- Australia
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
+image: https://www.bom.gov.au/themes/custom/bom_theme/images/icons/favicon-192.png
+
 common:
+- type: Plans
+  url: plans/bureau-of-meteorology-plans-pricing.yml
+- type: Conventions
+  url: conventions/bureau-of-meteorology-conventions.yml
+- type: Authentication
+  url: authentication/bureau-of-meteorology-authentication.yml
+- type: Deprecation
+  url: lifecycle/bureau-of-meteorology-lifecycle.yml
+- type: Lifecycle
+  url: lifecycle/bureau-of-meteorology-lifecycle.yml
+- type: ErrorCatalog
+  url: errors/bureau-of-meteorology-error-codes.yml
+- type: Conformance
+  url: conformance/bureau-of-meteorology-conformance.yml
+- type: Hosts
+  url: hosts/bureau-of-meteorology-hosts.yml
+- type: Vendors
+  url: vendors/bureau-of-meteorology-vendors.yml
+- type: DomainSecurity
+  url: security/bureau-of-meteorology-domain-security.yml
 - type: Website
-  url: https://bom.gov.au/
+  url: https://www.bom.gov.au/
+- type: Documentation
+  url: https://www.bom.gov.au/resources/data-services
+  name: Data services
+- type: DataCatalog
+  url: https://reg.bom.gov.au/catalogue/data-feeds.shtml
+  name: Weather Data Services
+- type: Pricing
+  url: https://reg.bom.gov.au/climate/data-services/charges.shtml
+  name: Data services charges
+- type: SignUp
+  url: https://reg.bom.gov.au/reguser/reguser.shtml
+  name: Real-time Data Services registration
+- type: TermsOfService
+  url: https://www.bom.gov.au/sites/default/files/2026-10/bureau-of-meteorology-data-licence-agreement-october-2026.pdf
+  name: Data Licence Agreement
+- type: Copyright
+  url: https://www.bom.gov.au/copyright
+- type: Disclaimer
+  url: https://www.bom.gov.au/disclaimer
+- type: PrivacyPolicy
+  url: https://www.bom.gov.au/privacy
+- type: Support
+  url: https://www.bom.gov.au/contact
+- type: HelpCenter
+  url: https://www.bom.gov.au/website-help
+- type: Blog
+  url: https://www.bom.gov.au/news-and-media
+  name: News and media
+- type: About
+  url: https://www.bom.gov.au/about-the-bureau
+
+apis:
+- name: Space Weather API
+  description: The Space Weather API provides access to near real-time Australian Space Weather Forecasting Centre data from the Australian Bureau
+    of Meteorology (A index, K index, Dst index, magnetic alerts and warnings, aurora alerts, watches and outlooks). Requests are HTTP POSTs with
+    a JSON body carrying an API key obtained by registration.
+  humanURL: https://sws-data.sws.bom.gov.au/api-docs
+  baseURL: https://sws-data.sws.bom.gov.au/api/v1
+  tags:
+  - Space Weather
+  - Aurora
+  - Geomagnetic
+  properties:
+  - type: Documentation
+    url: https://sws-data.sws.bom.gov.au/api-docs
+  - type: Documentation
+    url: https://sws.bom.gov.au/Products_and_Services/4/3
+    name: Space Weather API (ASWFC)
+  aid: bureau-of-meteorology:space-weather-api
+- name: Water Data Online SOS2
+  description: OGC Sensor Observation Service 2.0 (KISTERS KiWIS SOS2) behind the Bureau's Water Data Online, serving time series from water measurement
+    stations across Australia (watercourse level and discharge, storage level and volume, rainfall, surface water quality). Operations advertised
+    by GetCapabilities are GetCapabilities, DescribeSensor, GetObservation, GetFeatureOfInterest and GetDataAvailability.
+  humanURL: https://www.bom.gov.au/waterdata/
+  baseURL: https://www.bom.gov.au/waterdata/services
+  tags:
+  - Water
+  - OGC
+  - SOS
+  properties:
+  - type: GetCapabilities
+    url: openapi/bureau-of-meteorology-water-data-online-sos2-capabilities.xml
+    name: SOS 2.0 GetCapabilities (captured 2026-10-22)
+  - type: SOS
+    url: https://www.bom.gov.au/waterdata/services?service=SOS&version=2.0&request=GetCapabilities
+  - type: Documentation
+    url: https://www.bom.gov.au/waterdata/
+  aid: bureau-of-meteorology:water-data-online-sos2
+
+x-coverage:
+  state: covered
+  reason: identity-verified
+  detail: Website and link pointers read from www.bom.gov.au homepage and Data services page; all fetched 2026-10-22 with a browser UA.
+  evidence:
+  - url: https://www.bom.gov.au/
+    status: 200
+  - url: https://www.bom.gov.au/resources/data-services
+    status: 200
+  - url: https://reg.bom.gov.au/catalogue/data-feeds.shtml
+    status: 200
+  - url: https://reg.bom.gov.au/climate/data-services/charges.shtml
+    status: 200
+  - url: https://reg.bom.gov.au/reguser/reguser.shtml
+    status: 200
+  - url: https://www.bom.gov.au/privacy
+    status: 200
+  - url: https://www.bom.gov.au/contact
+    status: 200
+x-enrichment:
+  date: '2026-10-22'
+  status: enriched
+  artifacts_added: 17
+  pass: modular-v1
+  engine: identity=anthropic,contract=anthropic,surfaces=anthropic,docs=anthropic,regulatory=anthropic

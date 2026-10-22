@@ -1,0 +1,17 @@
+generated: '2026-10-22'
+method: searched
+source: https://sws-data.sws.bom.gov.au/api-docs
+versioning:
+  scheme: url-path
+  current: v1
+  evidence: 'Each API method URL includes the prefix: https://sws-data.sws.bom.gov.au/api/v1/ ; error code 12 is "Unsupported API version: {version}".'
+deprecation:
+  policy: none published
+  announced:
+  - item: unencrypted HTTP access to the Space Weather API
+    text: Support for unencrypted HTTP requests will be withdrawn in early 2022.
+    source: https://sws-data.sws.bom.gov.au/api-docs#overview
+  other: 'Anonymous FTP: the Bureau cannot track the usage of any particular product thus it is not possible to directly contact customers affected by service changes. Customers requiring support, service continuity and access to more secure Cloud (S)FTP services should make use of the Bureau''s Registered User Services.'
+  other_source: https://reg.bom.gov.au/catalogue/data-feeds.shtml
+sla: none published; 'The Bureau does not guarantee the availability of information on the FTP site.'
+status_page: null

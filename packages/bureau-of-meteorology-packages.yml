@@ -1,0 +1,9 @@
+generated: '2026-10-22'
+method: none
+source: https://sws-data.sws.bom.gov.au/api-docs
+packages: []
+checked:
+- https://sws-data.sws.bom.gov.au/api-docs
+- https://registry.npmjs.org/-/v1/search?text=bureau%20of%20meteorology
+- https://pypi.org/search/?q=bureau+of+meteorology
+note: The Space Weather API docs, the Data services page and the Weather Data Services catalogue name no first-party SDK or client library. npm carries only community packages (node-bom, bom-weather, bomweather-mqtt, bom-mcp, @ashleyjacksonnet/bomweather ...) published by individuals, none by the Bureau, so none is recorded.
