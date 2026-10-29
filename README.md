@@ -64,5 +64,104 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Bureau of Meteorology is a company surfaced via the API Evangelist harvest backlog (source: australia-apidays-2026) and added to the network as a stub for full-pipeline profiling.
-- https://bom.gov.au/
+The Bureau of Meteorology (BOM) is Australia's national weather, climate and water agency. It provides forecasts, severe weather warnings, observations, flood information, marine and high seas forecasts and climate information, and offers data products for weather, climate, atmosphere, oceans, water and space weather through free services and paid subscription services, including registered-user real-time data feeds (forecast grids, satellite, radar and a geospatial service), climate data services and water data.
+
+**Areas:** Company · Government · Weather · Climate · Meteorology · Water · Open Data · Australia
+
+## Bureau of Meteorology on APIs.io
+
+Everything profiled for Bureau of Meteorology is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/bureau-of-meteorology/](https://apis.io/providers/bureau-of-meteorology/)** — or go straight to one of the APIs or properties below.
+
+### APIs (2)
+
+- [Space Weather API](https://apis.io/apis/bureau-of-meteorology/space-weather-api/) — The Space Weather API provides access to near real-time Australian Space Weather Forecasting Centre data from the Australian Bureau of Meteorology (A index,…
+- [Water Data Online SOS2](https://apis.io/apis/bureau-of-meteorology/water-data-online-sos2/) — OGC Sensor Observation Service 2.0 (KISTERS KiWIS SOS2) behind the Bureau's Water Data Online, serving time series from water measurement stations across…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Bureau Of Meteorology Authentication](https://apis.io/security/bureau-of-meteorology/bureau-of-meteorology-authentication/)
+- [Bureau Of Meteorology Domain Security](https://apis.io/security/bureau-of-meteorology/bureau-of-meteorology-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Bureau Of Meteorology Plans Pricing](https://apis.io/plans/bureau-of-meteorology/bureau-of-meteorology-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Bureau Of Meteorology Rate Limits](https://apis.io/rate-limits/bureau-of-meteorology/bureau-of-meteorology-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.bom.gov.au/)
+- [Documentation](https://www.bom.gov.au/resources/data-services)
+- [Pricing](https://reg.bom.gov.au/climate/data-services/charges.shtml)
+- [Sign up](https://reg.bom.gov.au/reguser/reguser.shtml)
+- [Support](https://www.bom.gov.au/contact)
+- [Blog](https://www.bom.gov.au/news-and-media)
+- [Terms of service](https://www.bom.gov.au/sites/default/files/2026-10/bureau-of-meteorology-data-licence-agreement-october-2026.pdf)
+- [Privacy policy](https://www.bom.gov.au/privacy)
+
+## API Evangelist rating
+
+**Kin Score 31.6** — thin · rubric 0.24.0 · scored 2026-10-22
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 0.0 |
+| Contract governance | 16.4 |
+| Operational transparency | 7.9 |
+| Developer ergonomics | 28.6 |
+| Access clarity | 73.2 |
+
+**Agent readiness 11.0** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | documented (partial credit) |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | documented (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 24.5** — Government & Public Sector
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/bureau-of-meteorology/](https://apis.io/providers/bureau-of-meteorology/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Bureau of Meteorology: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/bureau-of-meteorology/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
